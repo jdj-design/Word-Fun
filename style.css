@@ -2,12 +2,41 @@
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 font-size: 20px;
 color:darkgreen;
-background-color: rgb(255, 255, 255);
+background-color: rgba(194, 241, 192, 0.507);
 width: 100%;
 padding: 10px;
 border-bottom: 1px solid black;
 text-align: center;
 }
-body{
-background-color: rgb(237, 244, 236);
+body, html{
+background-color:white;
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.tomato{
+    border: 1px solid rgb(231, 230, 230);
+    
+    
+}
+.importance{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.plant{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    width: 60%;
+    padding: 10px;
+}
+.definition{
+    border-color: black;
+}
+.main{
+    padding-left: 10px;
 }
