@@ -47,4 +47,18 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error fetching data:', error));
     });
-});
+    document.getElementById('stem').addEventListener('click', function(event) {
+        
+
+        fetch('https://api.dictionaryapi.dev/api/v2/entries/en/stem')
+            .then(rawResponse => rawResponse.json())
+            .then(jsonifiedResponse => {
+                console.log(jsonifiedResponse);
+
+                const stemDef = jsonifiedResponse[0].meanings[0].definitions[3].definition;
+                console.log(stemDef);
+                document.getElementById('stemDefinition').innerText = `Stem: ${stemDef}`;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+        })
+})
