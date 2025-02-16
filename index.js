@@ -2,7 +2,7 @@ console.log('connection successful');
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('flowerArea').addEventListener('click', function(event) {
-        // event.preventDefault();  // Uncomment this if needed to prevent the default action
+        // flower events
 
         fetch('https://api.dictionaryapi.dev/api/v2/entries/en/flower')
             .then(rawResponse => rawResponse.json())
@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(jsonifiedResponse);
 
                 const definition = jsonifiedResponse[0].meanings[0].definitions[1].definition;
+                const flowerAudio= jsonifiedResponse[0].phonetics[2].audio;
+                const audioElement = new Audio(flowerAudio);
+                audioElement.play();
                 console.log(definition);
                 document.getElementById('definitionText').innerText = `Flower: ${definition}`;
             })
@@ -61,4 +64,21 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error fetching data:', error));
         })
+        document.getElementById('root').addEventListener('click', function(event) {
+        
+
+            fetch('https://api.dictionaryapi.dev/api/v2/entries/en/root')
+                .then(rawResponse => rawResponse.json())
+                .then(jsonifiedResponse => {
+                    console.log(jsonifiedResponse);
+    
+                    const rootDef = jsonifiedResponse[0].meanings[0].definitions[0].definition;
+                    console.log(rootDef);
+                    document.getElementById('rootDefinition').innerText = `Root: ${rootDef}`;
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        })
+
+
+
 })

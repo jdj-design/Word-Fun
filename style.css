@@ -31,12 +31,15 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: top;
-    width: 70%;
+    width: 95%;
     padding: 10px;
    
 }
 .definition{
     border-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    
 }
 .main{
     padding-left: 10px;
