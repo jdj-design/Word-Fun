@@ -32,4 +32,19 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error fetching data:', error));
     });
+
+    document.getElementById('fruit').addEventListener('click', function(event) {
+        
+
+        fetch('https://api.dictionaryapi.dev/api/v2/entries/en/fruit')
+            .then(rawResponse => rawResponse.json())
+            .then(jsonifiedResponse => {
+                console.log(jsonifiedResponse);
+
+                const fruitDef = jsonifiedResponse[0].meanings[0].definitions[1].definition;
+                console.log(fruitDef);
+                document.getElementById('fruitDefinition').innerText = `Fruit: ${fruitDef}`;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    });
 });
