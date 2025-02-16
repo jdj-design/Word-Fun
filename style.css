@@ -31,12 +31,16 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: top;
-    width: 60%;
+    width: 70%;
     padding: 10px;
+   
 }
 .definition{
     border-color: black;
 }
 .main{
     padding-left: 10px;
+}
+.definition{
+    padding-left: 2rem;
 }
