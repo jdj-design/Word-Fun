@@ -1,12 +1,12 @@
 .header{
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-family:monospace;
 font-size: 20px;
-color:darkgreen;
-background-color: rgba(194, 241, 192, 0.507);
+color:rgb(4, 58, 4);
+background-color: rgba(190, 211, 189, 0.178);
 width: 100%;
 padding: 10px;
-border-bottom: 1px solid black;
-text-align: center;
+border-bottom: 1px solid rgba(0, 0, 0, 0.082);
+text-align: left;
 }
 body, html{
 background-color:white;
@@ -16,7 +16,7 @@ box-sizing: border-box;
 }
 
 h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'monospace';
 }
 .tomato{
     border: 1px solid rgb(231, 230, 230);
@@ -24,7 +24,7 @@ h1{
     
 }
 .importance{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 }
 .plant{
@@ -37,7 +37,7 @@ h1{
 }
 .definition{
     border-color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: monospace;
     font-size: 17px;
     
 }
@@ -45,7 +45,11 @@ h1{
     padding-left: 10px;
 }
 .definition{
-    padding-left: 2rem;
+    padding-left: 5rem;
+}
+.definition p {
+    margin-bottom: 40px;
+
 }
 
 #buttonStuff{
@@ -54,6 +58,9 @@ h1{
     color:white;
     cursor: pointer;
     align-items: right;
+    font-size: 20px;
+    padding: 10px;
+    
 }
 #buttonStuff:hover{
     background-color: blue;
@@ -61,6 +68,6 @@ h1{
 
 .buttonLocation{
    display:flex;
-   justify-content: flex-end;
+   justify-content: right;
    margin-top: 10px;
 }
