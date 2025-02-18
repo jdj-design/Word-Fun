@@ -47,3 +47,7 @@ h1{
 .definition{
     padding-left: 2rem;
 }
+
+.buttonShow{
+    display:block;
+}

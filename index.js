@@ -1,5 +1,5 @@
 console.log('connection successful');
-
+let counting=0;
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('flowerArea').addEventListener('click', function(event) {
         // flower events
@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 audioElement.play();
                 console.log(definition);
                 document.getElementById('definitionText').innerText = `Flower: ${definition}`;
+                let counting= counting + 1;
             })
             .catch(error => console.error('Error fetching data:', error));
     });
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error fetching data:', error));
     });
+
     document.getElementById('stem').addEventListener('click', function(event) {
         
 
@@ -63,8 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('stemDefinition').innerText = `Stem: ${stemDef}`;
             })
             .catch(error => console.error('Error fetching data:', error));
-        })
-        document.getElementById('root').addEventListener('click', function(event) {
+        });
+
+     document.getElementById('root').addEventListener('click', function(event) {
         
 
             fetch('https://api.dictionaryapi.dev/api/v2/entries/en/root')
@@ -77,7 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.getElementById('rootDefinition').innerText = `Root: ${rootDef}`;
                 })
                 .catch(error => console.error('Error fetching data:', error));
-        })
+        });
+        
+    //document.getElementById('buttonStuff').style.display = 'block';
 
 
 
