@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     document.getElementById('leafs').addEventListener('click', function(event) {
-        // event.preventDefault();  // Uncomment this if needed to prevent the default action
+        
 
         fetch('https://api.dictionaryapi.dev/api/v2/entries/en/leaf')
             .then(rawResponse => rawResponse.json())

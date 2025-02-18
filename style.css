@@ -8,6 +8,7 @@ padding: 10px;
 border-bottom: 1px solid rgba(0, 0, 0, 0.082);
 text-align: left;
 }
+
 body, html{
 background-color:white;
 margin: 0px;
@@ -17,6 +18,7 @@ box-sizing: border-box;
 
 h1{
     font-family: 'monospace';
+    margin: 15px;
 }
 .tomato{
     border: 1px solid rgb(231, 230, 230);
@@ -25,6 +27,7 @@ h1{
 }
 .importance{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px;
     
 }
 .plant{
@@ -33,6 +36,8 @@ h1{
     align-items: top;
     width: 95%;
     padding: 10px;
+    border: 1px rgb(214, 209, 209) solid;
+    margin: 15px;
    
 }
 .definition{
