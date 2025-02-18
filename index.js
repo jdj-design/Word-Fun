@@ -1,6 +1,7 @@
 console.log('connection successful');
-let counting=0;
+
 document.addEventListener('DOMContentLoaded', function() {
+    let counting=0;
     document.getElementById('flowerArea').addEventListener('click', function(event) {
         // flower events
 
@@ -10,12 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(jsonifiedResponse);
 
                 const definition = jsonifiedResponse[0].meanings[0].definitions[1].definition;
-                const flowerAudio= jsonifiedResponse[0].phonetics[2].audio;
-                const audioElement = new Audio(flowerAudio);
-                audioElement.play();
                 console.log(definition);
                 document.getElementById('definitionText').innerText = `Flower: ${definition}`;
-                let counting= counting + 1;
+                counting= counting + 1;
+                showButton();
+                console.log(counting);
             })
             .catch(error => console.error('Error fetching data:', error));
     });
@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const leafDef = jsonifiedResponse[0].meanings[0].definitions[0].definition;
                 console.log(leafDef);
+                counting= counting + 1;
+                showButton();
                 document.getElementById('leafDefinition').innerText = `Leaf: ${leafDef}`;
             })
             .catch(error => console.error('Error fetching data:', error));
@@ -47,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const fruitDef = jsonifiedResponse[0].meanings[0].definitions[1].definition;
                 console.log(fruitDef);
+                counting= counting + 1;
+                showButton();
                 document.getElementById('fruitDefinition').innerText = `Fruit: ${fruitDef}`;
             })
             .catch(error => console.error('Error fetching data:', error));
@@ -62,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const stemDef = jsonifiedResponse[0].meanings[0].definitions[3].definition;
                 console.log(stemDef);
+                counting= counting + 1;
+                showButton();
                 document.getElementById('stemDefinition').innerText = `Stem: ${stemDef}`;
             })
             .catch(error => console.error('Error fetching data:', error));
@@ -77,12 +83,30 @@ document.addEventListener('DOMContentLoaded', function() {
     
                     const rootDef = jsonifiedResponse[0].meanings[0].definitions[0].definition;
                     console.log(rootDef);
+                    counting= counting + 1;
+                    showButton();
                     document.getElementById('rootDefinition').innerText = `Root: ${rootDef}`;
                 })
                 .catch(error => console.error('Error fetching data:', error));
         });
-        
-    //document.getElementById('buttonStuff').style.display = 'block';
+// resets the paragraphs//
+    function pageReset(){
+        document.getElementById('definitionText').innerText = '';
+        document.getElementById('leafDefinition').innerText = '';
+        document.getElementById('fruitDefinition').innerText = '';
+        document.getElementById('stemDefinition').innerText = '';
+        document.getElementById('rootDefinition').innerText = '';
+        document.getElementById('buttonStuff').style.display = 'none';
+        counting=0;
+    };
+
+    document.getElementById('buttonStuff').addEventListener('click', pageReset);
+
+    function showButton(){
+        if(counting>0){
+            document.getElementById('buttonStuff').style.display = 'block';
+        };
+    };
 
 
 
