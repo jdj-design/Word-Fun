@@ -2,7 +2,7 @@
 font-family:monospace;
 font-size: 20px;
 color:rgb(4, 58, 4);
-background-color: rgba(190, 211, 189, 0.178);
+background: rgba(190, 211, 189, 0.178);
 width: 100%;
 padding: 10px;
 border-bottom: 1px solid rgba(0, 0, 0, 0.082);
@@ -39,6 +39,7 @@ h1{
     width: 95%;
     padding: 10px;
     border: 1px rgb(214, 209, 209) solid;
+    background-color: rgba(190, 211, 189, 0.05);
     margin: 15px;
    
 }
