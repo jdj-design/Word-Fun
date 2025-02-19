@@ -2,6 +2,8 @@
 SDI Project 1 
 this webpage will let help users learn the parts of a plant. by clicking on the text in the image, an api call will go to the dictionary api. The clicking will also play the audio sound of that part of the plant selected.
 
+the definitions will always end up aligning with the parts of the flower.
+
 the user can click on where the lines point to on the plant as well, 'image is mapped'.
 
 clicking the reset button will reset the screen and all definitions will be removed.
