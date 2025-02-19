@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const fruitDef = jsonifiedResponse[0].meanings[0].definitions[1].definition;
                
                 const fruitSpeach=jsonifiedResponse[0].phonetics[1].audio;
-                const fruitAudio = new Audio(fruitSpeach);
-                fruitAudio.play();
+                const stemAudio = new Audio(fruitSpeach);
+                stemAudio.play();
 
                 console.log(fruitDef);
                 counting= counting + 1;
@@ -81,6 +81,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(jsonifiedResponse);
 
                 const stemDef = jsonifiedResponse[0].meanings[0].definitions[3].definition;
+                const stemSpeach=jsonifiedResponse[0].phonetics[0].audio;
+                const stemAudio = new Audio(stemSpeach);
+                stemAudio.play();
+
                 console.log(stemDef);
                 counting= counting + 1;
                 showButton();
@@ -98,6 +102,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log(jsonifiedResponse);
     
                     const rootDef = jsonifiedResponse[0].meanings[0].definitions[0].definition;
+                const rootSpeach=jsonifiedResponse[0].phonetics[1].audio;
+                const rootAudio = new Audio(rootSpeach);
+                rootAudio.play();
+
                     console.log(rootDef);
                     counting= counting + 1;
                     showButton();
