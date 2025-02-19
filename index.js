@@ -38,6 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(jsonifiedResponse);
 
                 const leafDef = jsonifiedResponse[0].meanings[0].definitions[0].definition;
+                const leafSpeach=jsonifiedResponse[0].phonetics[0].audio;
+                const leafAudio = new Audio(leafSpeach);
+                leafAudio.play();
+
                 console.log(leafDef);
                 counting= counting + 1;
                 showButton();
