@@ -59,6 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(jsonifiedResponse);
 
                 const fruitDef = jsonifiedResponse[0].meanings[0].definitions[1].definition;
+               
+                const fruitSpeach=jsonifiedResponse[0].phonetics[1].audio;
+                const fruitAudio = new Audio(fruitSpeach);
+                fruitAudio.play();
+
                 console.log(fruitDef);
                 counting= counting + 1;
                 showButton();
