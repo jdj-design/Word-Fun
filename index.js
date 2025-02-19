@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(jsonifiedResponse);
 
                 const definition = jsonifiedResponse[0].meanings[0].definitions[1].definition;
+                const soundDefinition =jsonifiedResponse[0].phonetics[2].audio;
+
+                 // converts and plays audio, I need a condition to stop it from being hit twice.
+                const flowerAudio = new Audio(soundDefinition);
+                flowerAudio.play();
+                
+
                 console.log(definition);
                 document.getElementById('definitionText').innerText = `Flower: ${definition}`;
                 counting= counting + 1;
