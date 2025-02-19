@@ -19,6 +19,8 @@ box-sizing: border-box;
 h1{
     font-family: 'monospace';
     margin: 15px;
+   
+    
 }
 .tomato{
     border: 1px solid rgb(231, 230, 230);
@@ -48,6 +50,7 @@ h1{
 }
 .main{
     padding-left: 10px;
+    
 }
 .definition{
     padding-left: 5rem;
@@ -78,4 +81,11 @@ h1{
 }
 strong{
     color: red;
+}
+
+span{
+    float: right;
+    margin-right: 15px;
+    font-size: 20px;
+    margin-top: 15px;
 }

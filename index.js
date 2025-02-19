@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(definition);
                 document.getElementById('definitionText').innerText = `Flower: ${definition}`;
                 counting= counting + 1;
+
+                document.getElementById('page').value= document.getElementById('page').value + 20;
+
                 showButton();
                 console.log(counting);
             })
@@ -44,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 console.log(leafDef);
                 counting= counting + 1;
+                document.getElementById('page').value= document.getElementById('page').value + 20;
                 showButton();
                 document.getElementById('leafDefinition').innerText = `Leaf: ${leafDef}`;
             })
@@ -66,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 console.log(fruitDef);
                 counting= counting + 1;
+                document.getElementById('page').value= document.getElementById('page').value + 20;
                 showButton();
                 document.getElementById('fruitDefinition').innerText = `Fruit: ${fruitDef}`;
             })
@@ -87,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 console.log(stemDef);
                 counting= counting + 1;
+                document.getElementById('page').value= document.getElementById('page').value + 20;
                 showButton();
                 document.getElementById('stemDefinition').innerText = `Stem: ${stemDef}`;
             })
@@ -108,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     console.log(rootDef);
                     counting= counting + 1;
+                    document.getElementById('page').value= document.getElementById('page').value + 20;
                     showButton();
                     document.getElementById('rootDefinition').innerText = `Root: ${rootDef}`;
                 })
@@ -120,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('fruitDefinition').innerText = '';
         document.getElementById('stemDefinition').innerText = '';
         document.getElementById('rootDefinition').innerText = '';
+        document.getElementById('page').value= document.getElementById('page').value =0;
         document.getElementById('buttonStuff').style.display = 'none';
         counting=0;
     };
